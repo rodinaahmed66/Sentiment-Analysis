@@ -1,5 +1,7 @@
 📘 Sentiment Analysis Using LSTM — End-to-End NLP Project
 
+data link "https://www.kaggle.com/datasets/abhi8923shriv/sentiment-analysis-dataset"
+
 A complete Sentiment Analysis System built using an LSTM deep learning model, deployed with Streamlit, and trained on the 1.6M Tweets Dataset.
 This project demonstrates a full machine-learning workflow: data preparation, preprocessing, training, evaluation, model saving, and app deployment.
 
@@ -21,7 +23,7 @@ Saved TensorFlow LSTM model & tokenizer
 
 📁 Project Architecture
 Sentiment-Analysis/
-│
+```│
 ├── data/
 │   ├── training.1600000.processed.noemoticon.csv
 │   └── testdata.manual.2009.06.14.csv
@@ -51,7 +53,7 @@ Sentiment-Analysis/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-
+```
 🔍 Model Architecture (LSTM)
 
 The final trained model includes:
@@ -86,7 +88,7 @@ This ensures the same preprocessing is applied during training & real-time predi
 
 Run:
 
-python src/train.py
+```python src/train.py```
 
 
 This script:
@@ -99,15 +101,17 @@ Trains the LSTM model
 
 Saves:
 
+```
 models/lstm_model.h5
 models/tokenizer.pkl
 models/max_len.txt
+```
 
 📊 Model Evaluation
 
 Run:
 
-python src/evaluate.py
+```python src/evaluate.py```
 
 
 You will get:
@@ -127,11 +131,11 @@ Training curves (via utils/plot_history.py)
 ⚡ Real-Time Sentiment Prediction
 
 Example code from predict.py:
-
+```
 model = load_model("models/lstm_model.h5")
 tokenizer = joblib.load("models/tokenizer.pkl")
 max_len = int(open("models/max_len.txt").read())
-
+```
 
 To test manually:
 
@@ -141,9 +145,9 @@ predict_sentiment("I love this project!")
 🌐 Streamlit Web App
 
 Run locally:
-
+```
 streamlit run src/app.py
-
+```
 
 The app:
 
@@ -171,13 +175,13 @@ Make sure these files exist:
 2️⃣ Go to Streamlit Cloud → “New app”
 
 Select your GitHub repo:
-
+```
 Branch: main
 
 Startup file:
 
 src/app.py
-
+```
 3️⃣ Streamlit automatically installs:
 tensorflow
 numpy
@@ -190,7 +194,7 @@ sklearn
 📦 requirements.txt
 
 Make sure you include:
-
+```
 tensorflow
 streamlit
 joblib
@@ -199,6 +203,7 @@ pandas
 scikit-learn
 nltk
 h5py
+```
 
 🧪 Example Predictions
 Text	Prediction	Confidence
