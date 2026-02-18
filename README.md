@@ -54,6 +54,7 @@ Sentiment-Analysis/
 ├── requirements.txt
 └── README.md
 ```
+
 🔍 Model Architecture (LSTM)
 
 The final trained model includes:
